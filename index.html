@@ -1,0 +1,35 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema de Reservas</title>
+</head>
+<body>
+    <h1>Sistema de Reservas</h1>
+    
+    <div id="loginSection">
+        <label for="idUsuario">Ingrese su idUsuario:</label>
+        <input type="number" id="idUsuario">
+        <button id="verificarBtn">Verificar</button>
+        <p id="loginMessage"></p>
+    </div>
+    
+    <div id="fechaSection" style="display: none;">
+        <label>Ingrese la fecha:</label>
+        <input type="number" id="dia" placeholder="Día" min="1" max="31">
+        <input type="number" id="mes" placeholder="Mes" min="1" max="12">
+        <input type="number" id="ano" placeholder="Año" min="2025">
+        <button id="enviarFechaBtn">Enviar Fecha</button>
+    </div>
+    
+    <div id="recursosSection" style="display: none;">
+        <label>Seleccione un recurso disponible:</label>
+        <select id="recursosSelect"></select>
+        <button id="reservarBtn">Reservar</button>
+        <p id="reservaMessage"></p>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
