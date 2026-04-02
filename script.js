@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let reservarBtn = document.getElementById('reservarBtn');
     let reservaMessage = document.getElementById('reservaMessage');*/
 
-    let idUsuario = null;
+ //   let idUsuario = null;
  //   let fechaSeleccionada = null;
 
 
