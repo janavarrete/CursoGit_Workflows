@@ -16,3 +16,31 @@ document.addEventListener('DOMContentLoaded', function() {
     let idUsuario = null;
     let fechaSeleccionada = null;
 })
+
+verificarBtn.addEventListener('click', function() {
+        let id = parseInt(idUsuarioInput.value);
+        if (isNaN(id)) {
+            loginMessage.textContent = 'Ingrese un número válido.';
+            return;
+        }
+        fetch('server.php', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ action: 'verificarUsuario', idUsuario: id })
+        }).then(function(response) {
+            return response.json();
+        }).then(function(data) {
+            if (data.exists) {
+                idUsuario = id;
+                loginSection.style.display = 'none';
+                fechaSection.style.display = 'block';
+                loginMessage.textContent = '';
+            } else {
+                loginMessage.textContent = 'idUsuario no existe. Intente de nuevo.';
+            }
+        }).catch(function(error) {
+            console.error('Error:', error);
+        });
+    });
+
+    
