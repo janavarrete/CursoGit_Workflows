@@ -20,5 +20,5 @@ jobs:
       - name: INSTALAR DEPENDENCIAS
         run: npm install
 
-      - name: EJECUTAR LINTER SOBRE TODOS LOS ARCHIVOS
+      - name: EJECUTAR LINTER UNICAMENTE SOBRE script.js
         run: npx eslint script.js
