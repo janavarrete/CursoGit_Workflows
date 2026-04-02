@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let reservarBtn = document.getElementById('reservarBtn');
     let reservaMessage = document.getElementById('reservaMessage');*/
 
-    let idUsuario = null;
+ //   let idUsuario = null;
  //   let fechaSeleccionada = null;
 
 
@@ -31,7 +31,7 @@ verificarBtn.addEventListener('click', function() {
             return response.json();
         }).then(function(data) {
             if (data.exists) {
-                idUsuario = id;
+                //idUsuario = id;
                 loginSection.style.display = 'none';
                 fechaSection.style.display = 'block';
                 loginMessage.textContent = '';
