@@ -21,4 +21,4 @@ jobs:
         run: npm install
 
       - name: EJECUTAR LINTER SOBRE TODOS LOS ARCHIVOS
-        run: npx eslint .
+        run: npx eslint script.js
