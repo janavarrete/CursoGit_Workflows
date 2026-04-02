@@ -1,0 +1,24 @@
+name: Lint JavaScript
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: COPIAR_CODIGO
+        uses: actions/checkout@v4 
+    
+      - name: PREPARAR NODE
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: INSTALAR DEPENDENCIAS
+        run: npm install
+
+      - name: EJECUTAR LINTER SOBRE TODOS LOS ARCHIVOS
+        run: npx eslint .
