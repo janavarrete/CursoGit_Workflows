@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     let idUsuario = null;
     let fechaSeleccionada = null;
-})
+
 
 verificarBtn.addEventListener('click', function() {
         let id = parseInt(idUsuarioInput.value);
@@ -43,4 +43,8 @@ verificarBtn.addEventListener('click', function() {
         });
     });
 
-    
+
+
+
+})
+
